@@ -1,9 +1,21 @@
+import lsg.ptb.gui.*;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+
+public class Main extends Application{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Testing git");
+		Application.launch(args);
+	}
+	
+	public void start(Stage primaryStage) throws Exception{
+		PlannerPane root = new PlannerPane();
+		Scene scene = new Scene(root);
+		primaryStage.setScene(scene);
+		primaryStage.show();
 	}
 
 }
