@@ -15,6 +15,7 @@ public class Main extends Application{
 		PlannerPane root = new PlannerPane();
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
+		primaryStage.setTitle("Zone Planner Application");
 		primaryStage.show();
 	}
 
