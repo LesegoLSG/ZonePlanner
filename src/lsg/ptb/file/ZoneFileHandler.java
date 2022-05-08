@@ -1,6 +1,8 @@
 package lsg.ptb.file;
 
+import lsg.ptb.model.*;
 import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -24,7 +26,7 @@ public final class ZoneFileHandler {
 				if(ActiveZone.validate(line)){
 					StringTokenizer tokens = new StringTokenizer(line,"\t");
 					
-					EzoneType type = EzoneType.valueOf(tokens.nextToken());
+					EZoneType type = EZoneType.valueOf(tokens.nextToken());
 					
 					String loc = tokens.nextToken();
 					StringTokenizer locToc = new StringTokenizer(loc, ":");
@@ -34,12 +36,12 @@ public final class ZoneFileHandler {
 					String scanClass = tokens.nextToken();
 					
 					int size = Integer.parseInt(tokens.nextToken());
-					Zones.add(new ActiveZone(x,y,type,size,scanClass));
+					zones.add(new ActiveZone(x,y,type,size,scanClass));
 				
 				}else if(PlannedZone.validate(line)){
 					StringTokenizer tokens = new StringTokenizer(line, "\t");
 					
-					EzoneType type = EzoneType.valueOf(tokens.nextToken());
+					EZoneType type = EZoneType.valueOf(tokens.nextToken());
 					
 					String loc = tokens.nextToken();
 					StringTokenizer locToc = new StringTokenizer(loc,":");
@@ -48,7 +50,7 @@ public final class ZoneFileHandler {
 					
 					String scale = tokens.nextToken();
 					
-					Zones.add(new PlannedZone(x,y,type,scale));
+					zones.add(new PlannedZone(x,y,type,scale));
 				}else{
 					System.out.println("Invalid Entry!");
 				}
@@ -60,6 +62,7 @@ public final class ZoneFileHandler {
 				scan.close();
 			}
 		}
+		return zones;
 	}
-	return Zones;
+	
 }

@@ -33,7 +33,7 @@ public class ActiveZone extends Zone{
 	}
 	
 	public String toString(){
-		return String.format("%s\t%d:%d\t%s\t%d", getType(),getLocation().getX(),getLocation.getY(),getExport(),getSize());
+		return String.format("%s\t%d:%d\t%s\t%d", getType(),getLocation().getX(),getLocation().getY(),getExport(),getSize());
 		
 	}
 	
