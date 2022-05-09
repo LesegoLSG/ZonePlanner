@@ -29,7 +29,7 @@ public final class ZoneFileHandler {
 					EZoneType type = EZoneType.valueOf(tokens.nextToken());
 					
 					String loc = tokens.nextToken();
-					StringTokenizer locToc = new StringTokenizer(loc, ":");
+					StringTokenizer locToc = new StringTokenizer(loc, ": ");
 					int x = Integer.parseInt(locToc.nextToken());
 					int y = Integer.parseInt(locToc.nextToken());
 					
@@ -44,7 +44,7 @@ public final class ZoneFileHandler {
 					EZoneType type = EZoneType.valueOf(tokens.nextToken());
 					
 					String loc = tokens.nextToken();
-					StringTokenizer locToc = new StringTokenizer(loc, ":");
+					StringTokenizer locToc = new StringTokenizer(loc, ": ");
 					int x = Integer.parseInt(locToc.nextToken());
 					int y = Integer.parseInt(locToc.nextToken());
 					
