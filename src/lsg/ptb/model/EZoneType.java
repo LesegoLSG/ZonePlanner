@@ -2,6 +2,11 @@ package lsg.ptb.model;
 
 import javafx.scene.paint.Color;
 
+/**
+ * 
+ * @author Mhlongo L
+ *
+ */
 public enum EZoneType {
 	INDUSTRIAL(Color.ORANGE),
 	COMMERCIAL(Color.CYAN),
